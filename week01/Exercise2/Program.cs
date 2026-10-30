@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 class Program
 {
@@ -27,6 +28,60 @@ class Program
         else
         {
             Console.WriteLine("You got an F!");
+        }
+
+        //Stretch Challenge
+        int lastDigit = (int)percentage % 10;
+        string sign;
+        if (lastDigit >= 7)
+        {
+            sign = "+";
+        }
+        else if (lastDigit <= 3)
+        {
+            sign = "-";
+        }
+        else
+        {
+            sign = "";
+        }
+
+        // Display the letter grade with the sign
+        if (letter == "A" && sign == "+")
+        {
+            Console.WriteLine("You got an A+!");
+        }
+        else if (letter == "A" && sign == "-")
+        {
+            Console.WriteLine("You got an A-!");
+        }
+        else if (letter == "B" && sign == "+")
+        {
+            Console.WriteLine("You got a B+!");
+        }
+        else if (letter == "B" && sign == "-")
+        {
+            Console.WriteLine("You got a B-!");
+        }
+        else if (letter == "C" && sign == "+")
+        {
+            Console.WriteLine("You got a C+!");
+        }
+        else if (letter == "C" && sign == "-")
+        {
+            Console.WriteLine("You got a C-!");
+        }
+        else if (letter == "D" && sign == "+")
+        {
+            Console.WriteLine("You got a D+!");
+        }
+        else if (letter == "D" && sign == "-")
+        {
+            Console.WriteLine("You got a D-!");
+        }
+        else
+        {
+            Console.WriteLine($"You got an {letter}.");
         }
 
         if (percentage >= 70)
